@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+
+<body>
+
+<py-script>
+contents = []
+i=0
+while True:
+
+    line = input()
+    contents.append(line)
+    if len(contents)>3 and contents[i]=="" and contents[i-1]=="" and contents[i-2]=="":
+        break
+    i=i+1
+print("***entered code is as follows***")
+for x in range(0,len(contents)):
+    print(contents[x])
+print("***output is as follows***")
+for x in range(0,len(contents)):
+    exec(contents[x])
+
+
+
+</py-script>
+
+  </body>
+</html>
